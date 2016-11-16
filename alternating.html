@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alternating</title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="600" height="600">
+</canvas>
+<script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+var num = parseInt(prompt("Enter an number"));
+function draw() {
+	for (i=num; i>0; i=i-1){
+		if (i % 2 == 0) {
+			context.fillStyle = "#ff0000";
+			context.fillRect(i*30, 0, 20, 20);
+		}
+		else if (i % 2 !== 0) {
+			context.fillStyle = "#00ffff";
+			context.beginPath();
+			context.arc(i*30+10, 10, 10, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+		}
+	}
+}
+</script>
+</body>
+</html>
