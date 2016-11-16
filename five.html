@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Square</title>
+	<title>Five Squares</title>
 </head>
 <body onload="draw()">
-<canvas id="sketch" width="500" height="500">
+<canvas id="sketch" width="300" height="300">
 </canvas>
 <script>
 function draw() {
 	var sketch = document.getElementById('sketch');
 	var context = sketch.getContext("2d");
-	context.fillRect(100, 100, 100, 100);
+
+	for(var i=0;i<=300;i=i+50){
+		context.fillStyle = "#00ff00";
+		context.fillRect(i, 0, 25, 25);
+	}
 }
+
+
 </script>
 </body>
 </html>
