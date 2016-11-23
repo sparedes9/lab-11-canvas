@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Six Red Circles</title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="400" height="400">
+</canvas>
+<script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+
+function draw() {
+	context.fillStyle = "#ff1111";
+	context.beginPath();
+	context.arc(150, 150, 100, 0, 2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+		context.fillStyle = "#ff3333";
+		context.beginPath();
+		context.arc(150, 150, 85, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+			context.fillStyle = "#ff4444";
+			context.beginPath();
+			context.arc(150, 150, 65, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+				context.fillStyle = "#ff6666";
+				context.beginPath();
+				context.arc(150, 150, 45, 0, 2 * Math.PI, true);
+				context.closePath();
+				context.fill();
+					context.fillStyle = "#ff8888";
+					context.beginPath();
+					context.arc(150, 150, 25, 0, 2 * Math.PI, true);
+					context.closePath();
+					context.fill();
+						context.fillStyle = "#ffaaaa";
+						context.beginPath();
+						context.arc(150, 150, 8, 0, 2 * Math.PI, true);
+						context.closePath();
+						context.fill();
+}
+</script>
+</body>
+</html>
