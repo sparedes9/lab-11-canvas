@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Square Packing</title>
+</head>
+<body onload="draw(5,7)">
+<canvas id="sketch" width="1200" height="900">
+</canvas>
+<script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+function draw(col,row) {
+
+
+	//BLACK CIRCLES
+	context.fillStyle = "#000000";
+	for (i=0; i<row; i=i+1){
+		for (j=0; j<col; j=j+1){
+		context.beginPath();
+		context.arc((i*30)+15, (j*30)+15, 15, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+		}
+	}//END BLACK CIRCLES
+
+		//WHITE CIRCLES
+	context.fillStyle = "#ffffff";
+	for (i=0; i<row; i=i+1){
+		for (j=0; j<col; j=j+1){
+		context.beginPath();
+		context.arc((i*30)+15, (j*30)+15, 13, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+		}
+	}//END WHITE CIRCLES
+
+}
+</script>
+</body>
+</html>
