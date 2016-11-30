@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Circle Optical</title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="300" height="300">
+</canvas>
+<script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+
+
+function draw() {
+
+		//CHECKER PIECES 1st & 3rd ROW RED
+	for (i=50; i>0; i=i-1){
+		if (i % 2 == 0) {context.fillStyle = "#000000";
+	}else{context.fillStyle = "#ffffff";}
+			context.beginPath();
+			context.arc(150, 150, 3*i, 0, 2 * Math.PI, true);
+			context.closePath();
+			context.fill();
+		}
+	}
+
+</script>
+</body>
+</html>
