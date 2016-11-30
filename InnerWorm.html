@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inner Worm</title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="600" height="600">
+</canvas>
+<script>
+var sketch = document.getElementById('sketch');
+var context = sketch.getContext("2d");
+
+
+function draw() {
+	//OUTER CIRCLES
+	for (i=15; i>0; i=i-1){
+	if (i % 2 == 0) {context.fillStyle = "#ffffff";
+	}else{context.fillStyle = "#000000";}
+		context.beginPath();
+		context.arc(350,(i*-13)+483, 14.2*i, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	}//END OUTER
+
+	//INNER CIRCLES
+	for (i=10; i>0; i=i-1){
+	if (i % 2 == 0) {context.fillStyle = "#ffffff";
+	}else{context.fillStyle = "#000000";}
+		context.beginPath();
+		context.arc(350,(i*10)+300, 10*i, 0, 2 * Math.PI, true);
+		context.closePath();
+		context.fill();
+	}//END INNER
+}
+	
+
+</script>
+</body>
+</html>
